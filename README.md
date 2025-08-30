@@ -8,16 +8,16 @@ This is the PyTorch implementation for our TOIS 2025 paper.
 
 ## Train LLMs for Denoising
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch train_denoise_model.py --dataset_name "Movie_noise_user0.0" --sample 5000
+CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch train_denoise_model.py --dataset_name "Toy_noise_user0.1" --sample 5000
 ```
 
 ## Generate Denoised Data
 ```
 ./denoise.sh $DENOISE_MODEL_PATH $NOISE_DATASET_PATH
 ```
-`DENOISE_MODEL_PATH`: Path of the denoising model, e.g.: ./save_denoise_model/Movie_noise_user0.0/batch128_sample5000_epoch50/checkpoint-2000
+`DENOISE_MODEL_PATH`: Path of the denoising model, e.g.: ./save_denoise_model/Toy_noise_user0.1/batch128_sample5000_epoch50/checkpoint-2000
 
-`NOISE_DATASET_PATH`: Path of the dataset to be denoised, e.g.: ./data/Movie_noise_user0.0
+`NOISE_DATASET_PATH`: Path of the dataset to be denoised, e.g.: ./data/Toy_noise_user0.1
 
 ## Train SASRec
 ```
